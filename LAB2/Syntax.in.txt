@@ -1,0 +1,39 @@
+Syntactic rules:
+
+declaration_statement = "var" identifier "is" type ";"
+
+type = "number" | "string" | "array"
+
+array = "[" number {"," number} "]"
+
+digit = "0" | "1" | ... | "9"
+
+number = digit | digit{digit}
+
+expression = expression ("+"| "-" ) term | term
+
+term = term ("*" | "/" | "%") factor | factor
+
+factor = "(" expression ")" | const | identifier
+
+assignment_statement = identifier "=" expression ";"
+
+input_output_statement = "read" | "write" identifier ";"
+
+compound_statement = {declaration_statement ";"} statement | {declaration_statement ";"} statement ";" compound_statement ";"
+
+statement = simple_statement | struct_statement ";"
+
+simple_statement = assign_statement | input_output_statement
+
+condition = expression relation expression ("and" | "or" condition)
+
+relation = "smaller" | "bigger" | "equal" | "notequal" | "biggerorequal" | "smallerorequal"
+
+if_statement = "if" "(" condition ")" "{" compound_statement "}" "else" "{" compound_statement "};"
+
+while_statement  = "while" "(" condition ")" "{" compound_statement "};"
+
+for_statement = "for" "(" assignment_statement ";" condition ";" compound_statement ")" "{" compound_statement "};"
+
+struct_statement = if_statement | while_statement | for_statement

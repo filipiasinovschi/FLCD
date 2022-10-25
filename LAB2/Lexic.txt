@@ -1,0 +1,29 @@
+LEXIC
+
+Alphabet:
+    a. Upper (A-Z) and lower case letters (a-z)
+    b. Underline character '_'
+    c. Decimal digits (0-9)
+
+Lexic:
+ a. Special symbols:
+	-operators:
+		+ - * / = bigger, smaller, equal, not_equal, biggerorequal, smallerorequal
+	-separators:
+            ( ) [ ] { } : ; space 
+
+	-reserved words:
+	  is var number string array if while for read display START_PROGRAM END_PROGRAM
+ b. Identifiers:  
+	-it is a sequence and chars and digits, the first letter being a letter:
+	    letter = "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+            digit = "1" | "2" | ... | "9"
+            identifier = letter | letter {letter} {digit}
+ c. Constants:
+        -number:
+            number = digit {digit}
+        -char:
+            char = 'letter' | 'digit'
+        -string:
+            char = letter | digit
+            string = char {string}
