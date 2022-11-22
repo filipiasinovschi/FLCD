@@ -118,6 +118,7 @@ public class FiniteAutomata {
         for (int i = 0; i < sequence.length(); i += 1) {
             s = String.valueOf(sequence.charAt(i));
             p = new Pair(currentState, s);
+
             try {
                 if (!T.get(p).isEmpty()) {
                     currentState = T.get(p).get(0);
