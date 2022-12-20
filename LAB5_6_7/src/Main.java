@@ -1,6 +1,13 @@
+import controller.Program;
+import ui.UI;
+
 public class Main {
-    public static void main(String[] args) throws Exception {
-        Grammar g = new Grammar();
-        g.readGrammar("C:\\Users\\Filip Iasinovschi\\Desktop\\LAB5_6_7\\src\\g1.txt");
+
+    public static void main(String[] args) {
+        Program program = new Program();
+
+        UI ui = new UI(program);
+        ui.start();
+
     }
 }
